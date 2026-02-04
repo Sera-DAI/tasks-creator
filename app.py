@@ -12,9 +12,8 @@ def about():
 
 @app.route("/task", methods=["POST"])
 def add_task():
-    global task_control_id
-    data = request.get_json()   
-    new_task = Task(id=task_control_id, title=data.get("title"), description=data.get("description", ""))
+    global task_control_id   
+    new_task = Task(id=task_control_id, title=request.get_json().get("title"), description=request.get_json().get("description", ""))
     task_list.append(new_task)
     task_control_id += 1
     print(task_list)
@@ -38,6 +37,22 @@ def getOneTask(idOneTask):
         if t.id == idOneTask:
             return jsonify(t.to_dict())
     return jsonify({"message": "Task not found with ID selected"}), 404
+
+@app.route("/task/<int:idPutTask>", methods=["PUT"])
+def getPutTask(idPutTask):
+    global task_list
+    taskPut = None
+    for t in task_list:
+        if t.id == idPutTask:
+            taskPut = t
+    if not taskPut:
+        return jsonify({"Message": "Task not found with ID selected"}), 404
+    taskPut.title = request.get_json().get("title")
+    taskPut.description = request.get_json().get("description")
+    taskPut.completed = request.get_json().get("completed")
+    
+    return jsonify({"Message": "Task updated successfully"})
+    
 if __name__ == "__main__":
     app.run(debug=True)
     
