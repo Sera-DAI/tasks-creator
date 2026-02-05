@@ -30,29 +30,34 @@ def get_tasks():
     
     return jsonify(output)
 
-@app.route("/task/<int:idOneTask>", methods=["GET"])
-def getOneTask(idOneTask):
+@app.route("/task/<int:id_one_taskk>", methods=["GET"])
+def getOneTask(id_one_taskk):
     global task_list    
-    for t in task_list:
-        if t.id == idOneTask:
-            return jsonify(t.to_dict())
+    idx_task_verify = next((t.to_dict() for t in task_list if t.id == id_one_taskk), None)
+    return jsonify(idx_task_verify)
     return jsonify({"message": "Task not found with ID selected"}), 404
 
 @app.route("/task/<int:idPutTask>", methods=["PUT"])
 def getPutTask(idPutTask):
     global task_list
-    taskPut = None
-    for t in task_list:
-        if t.id == idPutTask:
-            taskPut = t
-    if not taskPut:
+    task_put = next((t for t in task_list if t.id == idPutTask), None)
+    if not task_put:
         return jsonify({"Message": "Task not found with ID selected"}), 404
-    taskPut.title = request.get_json().get("title")
-    taskPut.description = request.get_json().get("description")
-    taskPut.completed = request.get_json().get("completed")
+    task_put.title = request.get_json().get("title")
+    task_put.description = request.get_json().get("description")
+    task_put.completed = request.get_json().get("completed")
     
     return jsonify({"Message": "Task updated successfully"})
     
+@app.route("/task/<int:id_delete_task>", methods=["DELETE"])
+def deleteTask(id_delete_task):
+    global task_list
+    idx_task_verify = next((i for i, t in enumerate(task_list) if t.id == id_delete_task), None)
+    if not idx_task_verify:
+        return jsonify({"Message": "Task not found with ID selected"}), 404
+    task_list.pop(idx_task_verify)
+    return jsonify({"Message": "Task deleted successfuly"})
+
 if __name__ == "__main__":
     app.run(debug=True)
     
