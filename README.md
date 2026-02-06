@@ -5,9 +5,9 @@ This is a simple aplication create for applying my personal study's involving ba
 
 ---
 
-HOW RECREATE THIS APLICATION IN YOUR PC
+HOW RECREATE THIS APPLICATION IN YOUR PC
 
-Follow the steps below for recreate the aplication in your local machine.
+Follow the steps below for recreate the application in your local machine.
 
 1. PRE-REQUIREMENTS
 
