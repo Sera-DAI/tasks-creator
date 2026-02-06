@@ -12,7 +12,7 @@ Follow the steps below for recreate the application in your local machine.
 1. PRE-REQUIREMENTS
 
    Confirm that you have a correct version of Python installed in your machine > Python 3.14.2. If you not have installed that version, enter in the following link and follow the steps to have Python installed >> https://www.python.org/downloads/
-   Type "python --version" or "python3 --version" in the Terminal after the installation for consulting a version installed in your machine and certificate that version is correct.
+   Type "python --version" or "python3 --version" in the Terminal after the installation for consult a version installed in your machine and certificate that version is correct.
 
 2. CLONE THIS REPOSITORY
 
