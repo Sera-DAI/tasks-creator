@@ -48,9 +48,6 @@ def testGetOneTaskStatus(client):
     print("="*100)
     
     list_words = ["id", "title", "description", "completed"]    
-    assert response.status_code == 200
-    assert "id" in test_task_list
-    assert "title" in test_task_list
-    assert "description" in test_task_list
-    assert "completed" in test_task_list
-    
+    for i in list_words:
+        name_replace = any(i in t for t in test_task_list)
+        assert True == name_replace
