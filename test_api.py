@@ -9,21 +9,29 @@ def client():
         yield client
     
 def testPostTaskStatus(client):
-    test_new_task = {
-        "title": "To study Python"
-    }
-    response = client.post('/task', json=test_new_task)
+    verify = None
+    list_words = ['Python', 'Java', 'Go']
+    it = 0
+    while verify == None:
+        
+        test_new_task = {
+            "title": f"To study {list_words[it]}"
+        }
+        response = client.post('/task', json=test_new_task)
+        it += 1
+        if it == len(list_words):
+            verify = 1
 
-    assert response.status_code == 200 or 201
+    assert response.status_code == 200
     
 def testGetTasksStatus(client):
     response = client.get('/task')  
     test_get_task = response.get_json()
     
     print("\n" + "="*100)
-    print("LOG: ")
+    print("LOG GET ALL TASKS:")
     pprint(test_get_task['tasks'])
-    print("\n" + "="*100)
+    print("="*100)
     
     list_words = ["id", "title", "description", "completed"]
     for i in list_words:
@@ -43,7 +51,7 @@ def testGetOneTaskStatus(client):
     response = client.get('/task/1')
     test_task_list = response.get_json()
     print("\n" + "="*100)
-    print("LOG:")
+    print("LOG GET ONE TASK:")
     pprint(test_task_list)
     print("="*100)
     
@@ -51,3 +59,30 @@ def testGetOneTaskStatus(client):
     for i in list_words:
         name_replace = any(i in t for t in test_task_list)
         assert True == name_replace
+        
+def testDeletetask(client):
+    requests = {
+        "id_1": client.get('/task/3'),
+        "id_2": client.delete('/task/3'),
+        "id_3": client.get('/task/3')
+    }
+    dict_test = {
+        "requisitions": requests,
+        "responses": {key: value.get_json() for key, value in requests.items()}
+        }
+    
+    print("\n" + "="*100)
+    print("LOG GET BEFORE DELETE:")
+    pprint(dict_test["responses"]["id_1"])
+    print("LOG DELETE:")
+    pprint(dict_test["responses"]["id_2"])
+    print("GET AFTER DELETE:")
+    pprint(dict_test["responses"]["id_3"])
+    print("="*100)
+    
+
+    for keys in dict_test["requisitions"]:
+        assert (status := dict_test["requisitions"][keys].status_code) in [200, 201]
+    assert "Message" in (status_delete := dict_test["responses"]["id_2"]) 
+    assert (status_delete := dict_test["responses"]["id_2"]["Message"]) == "Task deleted successfully"
+    
