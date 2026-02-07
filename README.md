@@ -1,7 +1,7 @@
-# Task-Flask 
-CONCEPTS
+# 📝 Task-Flask 📝
+:book: CONCEPTS :book:
 
-This is a simple aplication create for applying my personal study's involving basic concepts of Flask, APIs and CRUD.  
+This is a simple application create for applying my personal study's involving basic concepts of Flask, APIs and CRUD.  He was developed using pure language Python.
 
 ---
 
