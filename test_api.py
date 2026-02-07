@@ -9,19 +9,12 @@ def client():
         yield client
     
 def testPostTaskStatus(client):
-    verify = None
     list_words = ['Python', 'Java', 'Go']
-    it = 0
-    while verify == None:
-        
+    for word in list_words:
         test_new_task = {
-            "title": f"To study {list_words[it]}"
+            "title": f"To study {word}"
         }
         response = client.post('/task', json=test_new_task)
-        it += 1
-        if it == len(list_words):
-            verify = 1
-
     assert response.status_code == 200
     
 def testGetTasksStatus(client):
