@@ -5,7 +5,7 @@ class Task:
     id: id
     title: title
     description: description
-    completed: completed=False
+    completed: completed
     
     def to_dict(self):
         return {
