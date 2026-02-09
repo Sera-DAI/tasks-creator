@@ -1,21 +1,31 @@
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Sera-DAI)](https://github.com/anuraghazra/github-readme-stats)
-
-:book: CONCEPTS :book:
+![Header](./github-header-banner.png)
 
 <p align="center">
-  <img src="https://img.shields.io/github/license/Sera-DAI/Task-Flask?style=flat-square" alt="License">
-  <img src="https://img.shields.io/github/languages/top/Sera-DAI/Task-Flask?style=flat-square&color=blue" alt="Top Language">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=git,github,powershell,py,vscode,windows" />
+  </a>
 </p>
-
-This is a simple application create for applying my personal study's involving basic concepts of Flask, APIs and CRUD. The focus is the creation and consuming of tasks involving HTTP(GET, POST, DELETE, PUT). He was developed using pure language Python.
+<p align="center">
+  <img src="https://img.shields.io/badge/stats-in%20development-orange?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/python-3.14.2-blue?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white" />
+  <img src="https://img.shields.io/github/repo-size/Sera-DAI/creator-tasks?style=for-the-badge" />
+  <img src="https://img.shields.io/github/last-commit/Sera-DAI/creator-tasks?style=for-the-badge" />
+</p>
 
 ---
 
-🛠️ HOW RECREATE THIS APPLICATION IN YOUR PC 🛠️
+# 📖 CONCEPT 📖
+
+This is a simple application create for applying my personal study's involving basic concepts of Flask, APIs and CRUD. The focus is the creation and consuming of tasks involving HTTP(GET, POST, DELETE, PUT). He was developed using pure language Python.
+
+
+
+# 🛠️ HOW RECREATE THIS APPLICATION IN YOUR PC 🛠️
 
 Follow the steps below for recreate this application in your local machine.
 
-1. ⚙️ PRE-REQUIREMENTS ⚙️
+1. ### ⚙️ PRE-REQUIREMENTS ⚙️
 
    Confirm that you have a correct version of Python installed in your machine > Python 3.14.2. 
    
@@ -24,9 +34,9 @@ Follow the steps below for recreate this application in your local machine.
    
    Type "python --version" or "python3 --version" in the Terminal after the installation for consult a version installed in your machine and certificate that version is correct.
 
-2. 📦 CLONE THIS REPOSITORY 📦
+2. ### 📦 CLONE THIS REPOSITORY 📦
 
-   Type in the Terminal "git clone https://github.com/Sera-DAI/Task-Flask.git" to clone this code in your machine. Certify that clone is inside of your directory of preference. Run "cd Task-Flask".
+   Type in the Terminal "git clone https://github.com/Sera-DAI/creator-tasks.git" to clone this code in your machine. Certify that clone is inside of your directory of preference. Run "cd creator-tasks".
 
 3. CREATE A DESKTOP ENVIRONMENT
 
