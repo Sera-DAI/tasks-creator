@@ -9,8 +9,8 @@
   <img src="https://img.shields.io/badge/stats-in%20development-orange?style=for-the-badge" />
   <img src="https://img.shields.io/badge/python-3.14.2-blue?style=for-the-badge&logo=python&logoColor=white" />
   <img src="https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white" />
-  <img src="https://img.shields.io/github/repo-size/Sera-DAI/creator-tasks?style=for-the-badge" />
-  <img src="https://img.shields.io/github/last-commit/Sera-DAI/creator-tasks?style=for-the-badge" />
+  <img src="https://img.shields.io/github/repo-size/Sera-DAI/tasks-creator?style=for-the-badge" />
+  <img src="https://img.shields.io/github/last-commit/Sera-DAI/tasks-creator?style=for-the-badge" />
 </p>
 
 ---
@@ -51,7 +51,7 @@ Follow the steps below for recreate this application in your local machine.
 
 2. ###  CLONE THIS REPOSITORY 
 
-   Type in the Terminal "git clone https://github.com/Sera-DAI/creator-tasks.git" to clone this code in your machine. Certify that clone is inside of your directory of preference. Run "cd creator-tasks".
+   Type in the Terminal "git clone https://github.com/Sera-DAI/tasks-creator.git" to clone this code in your machine. Certify that clone is inside of your directory of preference. Run "cd tasks-creator".
 
 3. ### CREATE A DESKTOP ENVIRONMENT
 
