@@ -9,12 +9,16 @@ def client():
         yield client
     
 def testPostTaskStatus(client):
-    list_words = ['Python', 'Java', 'Go']
+    list_words = ['Python', 'Java', 'Go', 'C', 'C#', 'C+']
+    print("\n" + "="*100)
+    print("LOG POST TASKS:")
     for word in list_words:
         test_new_task = {
-            "title": f"To study {word}"
+            "title": f"To study {word}",
+            "description": f"test + {word}"
         }
         response = client.post('/task', json=test_new_task)
+        print()
     assert response.status_code == 200
     
 def testGetTasksStatus(client):
@@ -23,8 +27,7 @@ def testGetTasksStatus(client):
     
     print("\n" + "="*100)
     print("LOG GET ALL TASKS:")
-    pprint(test_get_task['tasks'])
-    print("="*100)
+    pprint(test_get_task)
     
     list_words = ["id", "title", "description", "completed"]
     for i in list_words:
@@ -55,9 +58,9 @@ def testGetOneTaskStatus(client):
         
 def testDeletetask(client):
     requests = {
-        "id_1": client.get('/task/3'),
-        "id_2": client.delete('/task/3'),
-        "id_3": client.get('/task/3')
+        "id_1": client.get('/task/1'),
+        "id_2": client.delete('/task/1'),
+        "id_3": client.get('/task/1')
     }
     dict_test = {
         "requisitions": requests,
@@ -69,7 +72,7 @@ def testDeletetask(client):
     pprint(dict_test["responses"]["id_1"])
     print("LOG DELETE:")
     pprint(dict_test["responses"]["id_2"])
-    print("GET AFTER DELETE:")
+    print("LOG GET AFTER DELETE:")
     pprint(dict_test["responses"]["id_3"])
     print("="*100)
     
