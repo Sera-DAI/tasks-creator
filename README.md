@@ -1,4 +1,4 @@
-![header](file:///C:/Users/Polic/Downloads/github-header-banner.png)
+[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Sera-DAI)](https://github.com/anuraghazra/github-readme-stats)
 
 :book: CONCEPTS :book:
 
