@@ -14,18 +14,21 @@
 </p>
 
 ---
+# 📜 ABOUT 📜
+> [!NOTE]
+> This is a simple application create for applying my personal study's involving basic concepts of Flask, APIs and CRUD. The focus of this project is developer my skills about Python, Flask, CRUD and APIs. The project itself is a very simple and don't require many steps for reproduce.
 
+> [!IMPORTANT]
+> Because it is a simple program and i'm still deepening my studys about ecosystem Python and backend, the application don't have a native DBA, this tasks being stored in a list. Basically the program is done for fun and knowlegde.
 # 📖 CONCEPT 📖
-
-This is a simple application create for applying my personal study's involving basic concepts of Flask, APIs and CRUD. The focus is the creation and consuming of tasks involving HTTP(GET, POST, DELETE, PUT). He was developed using pure language Python.
-
-
+> [!NOTE]
+> The main project is focused in create tasks via requisitions HTTP, these tasks being anything(do a job, task, clean the house and etc..). You create tasks, solve them and update the status via requisitions(EX: Postman). 
 
 # 🛠️ HOW RECREATE THIS APPLICATION IN YOUR PC 🛠️
 
 Follow the steps below for recreate this application in your local machine.
 
-1. ### ⚙️ PRE-REQUIREMENTS ⚙️
+1. ### PRE-REQUIREMENTS 
 
    Confirm that you have a correct version of Python installed in your machine > Python 3.14.2. 
    
@@ -34,16 +37,18 @@ Follow the steps below for recreate this application in your local machine.
    
    Type "python --version" or "python3 --version" in the Terminal after the installation for consult a version installed in your machine and certificate that version is correct.
 
-2. ### 📦 CLONE THIS REPOSITORY 📦
+2. ###  CLONE THIS REPOSITORY 
 
    Type in the Terminal "git clone https://github.com/Sera-DAI/creator-tasks.git" to clone this code in your machine. Certify that clone is inside of your directory of preference. Run "cd creator-tasks".
 
-3. CREATE A DESKTOP ENVIRONMENT
+3. ### CREATE A DESKTOP ENVIRONMENT
 
-  To maintain your libs of project isolated and avoid conflicts. 
-  Run in your Terminal: "python -m venv .venv" > ".venv/Scripts/activate" or "python3 -m venv .venv" > "source .venv/bin/activate" depending of your OS(python3 for mac/linux).
+    Run in your Terminal: "python -m venv .venv" > ".venv/Scripts/activate" or "python3 -m venv .venv" > "source .venv/bin/activate" depending of your OS(python3 for mac/linux).
 
-4. INSTALL ALL DEPENDENCIES
+4. ### INSTALL ALL DEPENDENCIES
 
-   Install all libs necessary that are listed an archive "requirements.txt".
-   Run "pip install -r requirements.txt"
+   Install all libs necessary that are listed in fle "requirements.txt". Run "pip install -r requirements.txt"
+
+# ⏳ USAGE⏳
+
+
