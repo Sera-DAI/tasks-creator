@@ -60,10 +60,7 @@ Follow the steps below for recreate this application in your local machine.
 4. ### INSTALL ALL DEPENDENCIES
 
    Install all libs necessary that are listed in fle "requirements.txt". Run "pip install -r requirements.txt"
+   
+# 📖 API DOCUMENTATION 📖
 
-# ⏳ USAGE⏳
-
-> [!NOTE]
-> Open the Postman and create your methods linked with endpoints of this application(EX: {{BASE_URL}}/task/1 for method PUT).
->
-> After create all methods, just enough use them. Use POST, fill the body
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://documenter.getpostman.com/view/52076750/2sBXcAHMui)
