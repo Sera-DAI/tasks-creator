@@ -22,7 +22,19 @@
 > Because it is a simple program and i'm still deepening my studys about ecosystem Python and backend, the application don't have a native DBA, this tasks being stored in a list. Basically the program is done for fun and knowlegde.
 # 📖 CONCEPT 📖
 > [!NOTE]
-> The main project is focused in create tasks via requisitions HTTP, these tasks being anything(do a job, task, clean the house and etc..). You create tasks, solve them and update the status via requisitions(EX: Postman). 
+> The main project is focused in create tasks via requisitions HTTP, these tasks being anything(do a job, task, clean the house and etc..). You create tasks, solve them and update the status via requisitions(EX: Postman).
+# 📂 DEPENDENCIES 📂
+
+> [!IMPORTANT]
+> ### Flask
+> 
+> ### Flask-SQAlchemy
+> 
+> ### Flask-Cors
+> 
+> ### Werkzeug
+> 
+> ### pytest
 
 # 🛠️ HOW RECREATE THIS APPLICATION IN YOUR PC 🛠️
 
@@ -51,4 +63,7 @@ Follow the steps below for recreate this application in your local machine.
 
 # ⏳ USAGE⏳
 
-
+> [!NOTE]
+> Open the Postman and create your methods linked with endpoints of this application(EX: {{BASE_URL}}/task/1 for method PUT).
+>
+> After create all methods, just enough use them. Use POST, fill the body
