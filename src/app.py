@@ -13,7 +13,7 @@ def about():
 @app.route("/task", methods=["POST"])
 def add_task():
     global task_control_id   
-    new_task = Task(id=task_control_id, title=request.get_json().get("title"), description=request.get_json().get("description", ""))
+    new_task = Task(id=task_control_id, title=request.get_json().get("title"), description=request.get_json().get("description", ""), completed=request.get_json().get("completed", False))
     task_list.append(new_task)
     task_control_id += 1
     print(task_list)
@@ -53,7 +53,7 @@ def getPutTask(idPutTask):
 def deleteTask(id_delete_task):
     global task_list
     idx_task_verify = next((i for i, t in enumerate(task_list) if t.id == id_delete_task), None)
-    if not idx_task_verify:
+    if idx_task_verify is None:
         return jsonify({"Message": "Task not found with ID selected"}), 404
     task_list.pop(idx_task_verify)
     return jsonify({"Message": "Task deleted successfully"})
