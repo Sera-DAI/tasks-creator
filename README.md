@@ -1,20 +1,30 @@
-# 📝 Task-Flask 📝
+![header](file:///C:/Users/Polic/Downloads/github-header-banner.png)
+
 :book: CONCEPTS :book:
 
-This is a simple application create for applying my personal study's involving basic concepts of Flask, APIs and CRUD.  He was developed using pure language Python.
+<p align="center">
+  <img src="https://img.shields.io/github/license/Sera-DAI/Task-Flask?style=flat-square" alt="License">
+  <img src="https://img.shields.io/github/languages/top/Sera-DAI/Task-Flask?style=flat-square&color=blue" alt="Top Language">
+</p>
+
+This is a simple application create for applying my personal study's involving basic concepts of Flask, APIs and CRUD. The focus is the creation and consuming of tasks involving HTTP(GET, POST, DELETE, PUT). He was developed using pure language Python.
 
 ---
 
-HOW RECREATE THIS APPLICATION IN YOUR PC
+🛠️ HOW RECREATE THIS APPLICATION IN YOUR PC 🛠️
 
-Follow the steps below for recreate the application in your local machine.
+Follow the steps below for recreate this application in your local machine.
 
-1. PRE-REQUIREMENTS
+1. ⚙️ PRE-REQUIREMENTS ⚙️
 
-   Confirm that you have a correct version of Python installed in your machine > Python 3.14.2. If you not have installed that version, enter in the following link and follow the steps to have Python installed >> https://www.python.org/downloads/
+   Confirm that you have a correct version of Python installed in your machine > Python 3.14.2. 
+   
+   If you not have installed that version, enter in the following link and follow the steps to have Python installed >> https://www.python.org/downloads/
+
+   
    Type "python --version" or "python3 --version" in the Terminal after the installation for consult a version installed in your machine and certificate that version is correct.
 
-2. CLONE THIS REPOSITORY
+2. 📦 CLONE THIS REPOSITORY 📦
 
    Type in the Terminal "git clone https://github.com/Sera-DAI/Task-Flask.git" to clone this code in your machine. Certify that clone is inside of your directory of preference. Run "cd Task-Flask".
 
