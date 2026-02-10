@@ -36,7 +36,7 @@
 > 
 > ### pytest
 
-# 🛠️ HOW RECREATE THIS APPLICATION IN YOUR PC 🛠️
+# 🛠️ HOW RECREATE THIS APPLICATION 🛠️
 
 Follow the steps below for recreate this application in your local machine.
 
@@ -62,5 +62,12 @@ Follow the steps below for recreate this application in your local machine.
    Install all libs necessary that are listed in fle "requirements.txt". Run "pip install -r requirements.txt"
    
 # 📖 API DOCUMENTATION 📖
-
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://documenter.getpostman.com/view/52076750/2sBXcAHMui)
+
+# 🖥️ USAGE 🖥️
+
+For use this application, run the server in your machine and send requests for store tasks in list. Send more requests, update or delete... After the use, close the application for stop server.
+
+>[!IMPORTANT]
+> After the application is used and stoped, the informations contained in the list being deleted, REMEMBER THIS.
+  
