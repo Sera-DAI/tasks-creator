@@ -57,7 +57,3 @@ def deleteTask(id_delete_task):
         return jsonify({"Message": "Task not found with ID selected"}), 404
     task_list.pop(idx_task_verify)
     return jsonify({"Message": "Task deleted successfully"})
-
-if __name__ == "__main__":
-    app.run(debug=True)
-    
