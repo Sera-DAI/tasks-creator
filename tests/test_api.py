@@ -22,34 +22,35 @@ def testPostTaskStatus(client):
     assert response.status_code == 200
     
 def testGetTasksStatus(client):
-    list_test_get = []
-    for idx, var in enumerate(list_words):
+    for i in list_words:
         response = client.get(f'/task')  
-        list_test_get.append(response.get_json())
     
+    response_get_test = response.get_json()
     print("\n" + "="*100)
     print("LOG GET ALL TASKS:")
-    pprint(list_test_get)
+    pprint(response_get_test)
     
     list_variables = ["id", "title", "description", "completed"]
-    idx_position = 0
     for i in list_variables:
-        name_replace = any(i in t for t in list_test_get[idx_position]['tasks'])
+        name_replace = any(i in t for t in response_get_test['tasks'])
         assert True == name_replace
         
     
 def testGetOneTaskStatus(client):
-    response = client.get('/task/1')
-    test_task_list = response.get_json()
+    test_task_list = []
+    for idx, t in enumerate(list_words):
+        response = client.get(f'/task/{idx+1}')
+        test_task_list.append(response.get_json())
+        
     print("\n" + "="*100)
     print("LOG GET ONE TASK:")
     pprint(test_task_list)
     print("="*100)
     
-    list_words = ["id", "title", "description", "completed"]    
-    for i in list_words:
-        name_replace = any(i in t for t in test_task_list)
-        assert True == name_replace
+    list_variables = ["id", "title", "description", "completed"]    
+    for dct in test_task_list:
+            for i in list_variables:
+                assert i in dct, f"The field {i} don't being presente in {dct}"   
         
 def testPutTask(client):
     test_put_json = {
@@ -57,32 +58,30 @@ def testPutTask(client):
     }
     
     id_url = 1
-    response = client.put('/task/1', json=test_put_json)
+    for t in list_words:
+        response = client.put(f'/task/{id_url}', json=test_put_json)           
+    get_response = client.get('/task')
+        
+    print("\n" + "="*100)
+    print("LOG AFTER PUT")
+    pprint(get_response.get_json())
     
-    assert response.status_code == 200    
-    
+    assert response.status_code == 200
+
 def testDeletetask(client):
-    requests = {
-        "id_1": client.get('/task/1'),
-        "id_2": client.delete('/task/1'),
-        "id_3": client.get('/task/1')
-    }
-    dict_test = {
-        "requisitions": requests,
-        "responses": {key: value.get_json() for key, value in requests.items()}
-        }
+    list_delete = []
+    for idx, l in enumerate(list_words):
+        response = client.delete(f'/task/{idx+1}')
+        list_delete.append(response.get_json())
+    get_response = client.get('/task')
     
     print("\n" + "="*100)
-    print("LOG GET BEFORE DELETE:")
-    pprint(dict_test["responses"]["id_1"])
     print("LOG DELETE:")
-    pprint(dict_test["responses"]["id_2"])
-    print("LOG GET AFTER DELETE:")
-    pprint(dict_test["responses"]["id_3"])
-    print("="*100)
+    pprint(list_delete)
+    print("\n" + "="*100)
+    pprint(get_response.get_json())
     
-
-    for keys in dict_test["requisitions"]:
-        assert (status := dict_test["requisitions"][keys].status_code) in [200, 201]
-    assert "Message" in (status_delete := dict_test["responses"]["id_2"]) 
-    assert (status_delete := dict_test["responses"]["id_2"]["Message"]) == "Task deleted successfully"
+    assert response.status_code in [200, 201]
+    for idx, l in enumerate(list_words):
+        assert "Message" in list_delete[idx]
+        assert "Task deleted successfully" in list_delete[idx]["Message"]
